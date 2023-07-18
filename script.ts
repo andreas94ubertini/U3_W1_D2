@@ -16,7 +16,7 @@ class Account {
 }
 
 class MotherAccount extends Account {
-    constructor(_nome: string, _cognome: string,) {
+    constructor(_nome: string) {
         super(_nome);
         this.addInterest()
     }
@@ -35,7 +35,7 @@ class SonAccount extends Account {
 }
 
 let figlio = new SonAccount('figlio')
-let mamma = new MotherAccount("maria", 'rossi')
+let mamma = new MotherAccount("mamma")
 
 const deposit = function (person: Account, quantity: number): void {
     person.oneDeposit(quantity)
@@ -67,7 +67,6 @@ form.addEventListener('submit', (e) => {
     } else {
         console.log('seleziona un account')
     }
-    let operation: string
 
 // @ts-ignore
     if (selectOperation.value === '1' && person === 'mamma') {
