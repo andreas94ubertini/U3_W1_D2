@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BankApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+<div class="container">
+    <div class="row justify-content-center mt-3">
+        <div class="col d-flex flex-column">
+            <form action="" id="form">
+                <div >
+                    <select id="select-account" class="form-select" aria-label="Default select example">
+                        <option selected class="text-center">Su quale account vuoi operare?</option>
+                        <option value="1" class="text-center">Mamma</option>
+                        <option value="2" class="text-center">Figlio</option>
+                    </select>
+                </div>
+                <div class="mt-1">
+                    <select id="select-operation" class="form-select" aria-label="Default select example2">
+                        <option selected class="text-center">Che tipo di operazione vuoi fare?</option>
+                        <option value="1" class="text-center">Versamento</option>
+                        <option value="2" class="text-center">Prelievo</option>
+                    </select>
+                </div>
+                <div class="mt-3 text-center">
+                    <input id="quantity" type="number" min="0" required class="rounded shadow-lg">
+                    <button class="btn btn-primary">Esegui</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col d-flex flex-column align-items-center bg-success text-light">
+            <h2>Mamma</h2>
+            <p class="check-operation"></p>
+            <p class="m-0 saldo"></p>
+            <p id="interest"></p>
+        </div>
+        <div class="col d-flex flex-column align-items-center bg-primary text-light">
+            <h2>Figlio</h2>
+            <p class="check-operation"></p>
+            <p class="m-0 saldo"></p>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
